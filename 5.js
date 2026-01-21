@@ -35,3 +35,8 @@ for (let i = 0; i<a.length; i++) {
     };
 }
 alert(c+" Is Biggest!")
+
+// let w=[];
+// for (let i = 0; i < a.length; i++) {
+//     w.push(a[a.length-i])
+// }
