@@ -16,8 +16,9 @@
 
 
 let a =[];
-for (let i = 1; i <=5; i++) {
-    let b=Number(prompt("Enter What you add in Your array"))
+let n=Number(prompt("How many Numbers You Push in Array?"))
+for (let i = 0; i <n; i++) {
+    let b=Number(prompt("What you add in Your array?"))
     a.push(b)   
 }
 alert(a+" Is Added Sucessfully!")
@@ -27,3 +28,10 @@ for (let index = 0; index < a.length; index++) {
 }
 alert(sum+" Is Total!")
 console.log(sum)
+let c=a[0];
+for (let i = 0; i<a.length; i++) {
+    if (c<a[i]) {
+        c=a[i]
+    };
+}
+alert(c+" Is Biggest!")
