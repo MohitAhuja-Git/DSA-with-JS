@@ -46,22 +46,37 @@
     // console.log(rev)
             
 // Best way with two pointers for pallindrome:::::::::::::::
-let s = "mqw";
-let j = s.length - 1;
-let i = 0;
-let isp = true;
+// let s = "mqw";
+// let j = s.length - 1;
+// let i = 0;
+// let isp = true;
 
-while (i < j) {
-    if (s[i] !== s[j]) {
-        isp = false;
-        break;                               
-    }
-    i++;
-    j--;   // ✅ FIX HERE
+// while (i < j) {
+//     if (s[i] !== s[j]) {
+//         isp = false;
+//         break;                               
+//     }
+//     i++;
+//     j--;   // ✅ FIX HERE
+// }
+
+// if (isp) {
+//     console.log("Palindrome");
+// } else {
+//     console.log("Not Palindrome");
+// }
+
+
+// last question::::::::::::::::::::::::::::::::::::::::::
+let s="hello";
+let arr =new Array(128).fill(0);
+for (let i = 0; i <s.length; i++) {
+    let idx =s.charCodeAt(i);
+    arr[idx]+=1;
 }
-
-if (isp) {
-    console.log("Palindrome");
-} else {
-    console.log("Not Palindrome");
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i]) {
+        console.log(String.fromCharCode(i)+" :- appears at " +arr[i]+" times");
+    }
+    
 }
