@@ -97,31 +97,148 @@
 // console.log(j)    
 
 // ----------------Merging Array----------------------|
-let arr1 = [1, 3, 4, 6];
-let arr2 = [2, 5, 7];
+// let arr1 = [1, 3, 4, 6];
+// let arr2 = [2, 5, 7];
 
-let tem =new Array(arr1.length+arr2.length)
-let i = 0, j = 0;
+// let tem =new Array(arr1.length+arr2.length)
+// let i = 0, j = 0;
 
-while (i < arr1.length && j < arr2.length) {
-    if (arr1[i] < arr2[j]) {
-        tem.push(arr1[i]);
-        i++;
-    } else {
-        tem.push(arr2[j]);
-        j++;
-    }
+// while (i < arr1.length && j < arr2.length) {
+//     if (arr1[i] < arr2[j]) {
+//         tem.push(arr1[i]);
+//         i++;
+//     } else {
+//         tem.push(arr2[j]);
+//         j++;
+//     }
+// }
+
+// while (i < arr1.length) {
+//     tem.push(arr1[i]);
+//     i++;
+// }
+
+// while (j < arr2.length) {
+//     tem.push(arr2[j]);
+//     j++;
+// }
+
+// console.log(tem);
+
+//--------------------------------stocks Price calculator--------------------|
+
+// let arr=[7,1,5,3,6,4]
+// let min =arr[0];
+// let maxprofit=0;
+// for (let i = 0; i < arr.length; i++) {
+//         if (arr[i]<min) {
+//         min=arr[i]; 
+//         }
+//     else{
+//         let profit =arr[i] - min;
+//         maxprofit=Math.max(maxprofit,profit);
+//     }
+// }
+// console.log(maxprofit)
+
+
+// --------------------------sort the colour------------------------------------|
+// let arr=[2,0,2,1,1,0];
+// let j=0;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] != 0) {
+//         let k=arr[i]
+//         arr[i]=arr[j]
+//         arr[j] = k
+//     }
+//     j++
+
+
+// }
+
+
+// correct!!!!!!!!!!!!!
+// let arr=[2,0,2,1,1,0];
+// let i=j=0;
+// let k=arr.length-1;
+
+// while (i<=k) {
+//     if (arr[i]==0) {
+//         let swap =arr[i];
+//         arr[i]=arr[j]
+//         arr[j]=swap
+//         i++,j++;
+//     }
+//     else if(arr[i]==2){
+//         let swap =arr[i];
+//         arr[i]=arr[k]
+//         arr[k]=swap
+//         k--;
+//     }
+//     else{i++}
+// }
+// console.log(arr)
+
+// -------------------Kadane's Algorithim--------------------------|
+// let arr=[-2,1,-3,4,-1,2,1,-5,4];
+// let sum=0;  // subarray
+// let max=-Infinity;
+// for (let i = 0; i < arr.length; i++) {
+//      sum+=arr[i];
+//       if (sum>max) {
+//          max=sum;
+//         }
+//     else if (sum<0) {
+//             sum=0;
+//         } 
+
+// }
+// console.log(max)
+// console.log(sum)
+// Our work in Kadane's algorithm::::::::::::::::::::::
+// ----------------------------------------------------------
+// 1:-add every Number of array!!                             |
+// 2:-if our addition is in -ve so make it zero!!             |
+// 3:-place the max sum in max variable!!                     |
+// 4:-subarray is started when one a sum is zero!!!           |
+// ----------------------------------------------------------
+
+// Moore's Voting Algorithm:::::::::::
+// let arr=[2,2,1,1,1,2,2];
+// let ans=arr[0];
+// let count=0;
+// for (let i = 0; i < arr.length; i++) {
+//     if (arr[i]==ans) {
+//         count+=1;
+//     }
+//     else if (arr[i]!=ans) {
+//         count-=1
+//         if (count==0) {
+//             ans=arr[i];
+//             count=1;
+//         }
+//     }
+// }
+// console.log(ans)
+// console.log(count)
+
+// Trapping Rain water::::::::::::::::::::::::::::::::::::::::::::::::::::::
+let arr = [4, 2, 0, 3, 2, 5]
+let left = new Array(arr.length)
+let right = new Array(arr.length)
+let maxright = arr[arr.length - 1]
+left[0] = maxleft // first element of left array is 
+right[right.length - 1] = maxright // last elemnt of right array is 
+for (let i = 1; i < arr.length; i++) {
+    maxleft = Math.max(arr[i], maxleft)
+    left[i] = maxleft;
 }
-
-while (i < arr1.length) {
-    tem.push(arr1[i]);
-    i++;
+for (let i = arr.length - 2; i >= 0; i--) {
+    maxright = Math.max(arr[i], maxright)
+    left[i] = maxright;
 }
-
-while (j < arr2.length) {
-    tem.push(arr2[j]);
-    j++;
+let ans = 0;
+for (let i = 0; i < arrlength; i++) {
+    ans += Math.min(left[i], right[i] - arr[i])
 }
-
-console.log(tem);
-
+console.log(ans)

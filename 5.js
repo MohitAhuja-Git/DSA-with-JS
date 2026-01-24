@@ -5,16 +5,6 @@
 // arr.pop() - Last Element of an Array is Removed!
 // 
 // 
-
-
-
-
-
-
-
-
-
-
 // let a =[];
 // let n=Number(prompt("How many Numbers You Push in Array?"))
 // for (let i = 0; i <n; i++) {
@@ -58,7 +48,7 @@
 // let i=0 ,j=0;
 // while (i<m.length) {
 //     if (m[i]== 0) {
-//         let k= m[i]//k=0 :-arr[5]
+//         let k= m[i]  //k=0 :-arr[5]
 //         m[i] = m[j]
 //         m[j] = k
 //         j++;

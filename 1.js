@@ -65,7 +65,7 @@
 // post :- a++ [add 1 in a]                                |  
 // pre :- ++a  [1 add in a]--------------------------------
 
-//
+
 // let i=10;
 // a= i++ + ++i; //11+11------Again Revise
 // console.log(a);
@@ -79,7 +79,7 @@
 // let b = true
 // b++;
 // console.log(b)   //Output is 2 because True=1
-//Maths Functions-------------------------------------------------------------------
+// Maths Functions-------------------------------------------------------------------
 // a=1.2343;
 // console.log(Math.round(10.5)) // Output 11
 // console.log(Math.ceil(10.1)) // Output 11
