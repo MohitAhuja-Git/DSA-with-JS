@@ -61,4 +61,25 @@
 // Selection → smallest dhundho, ek swap                              |
 // -------------------------------------------------------------------
 
-// insertion sort:-
+// insertion sort:-Left side hamesha sorted hoti hai
+// Ek element uthate hain → usko left mein sahi jagah daalte hain
+
+
+let arr=[10,5,12,1,3];
+let n = arr.length;
+
+
+for (let i = 1; i <n; i++) {
+    let key =arr[i]; // insert karna h===5
+    let j=i-1;
+
+    while (j>=0 && arr[j]>key) {
+        arr[j+1]=arr[j];
+        j--;
+    }
+    arr[j+1] = key;
+}
+console.log(arr)
+
+
+// We shift elements greater than key one position to the right to create space for insertion
