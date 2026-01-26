@@ -1,7 +1,7 @@
 //----------------------------------Sorting Algorithms---------------------------------------|
 // . What Is Sorting?
 
-// Sorting is the process of arranging data in a specific order:
+// Sorting is the process of aanging data in a specific order:
 
 // Ascending (small → large)
 
@@ -21,16 +21,44 @@
 
 
 // 1:- Bubble sort :-Side-by-side elements ko compare karo, agar left bada ho to swap karo.
-let arr=[10,5,12,1,3];
-let n = arr.length;
-for (let i = 0; i < n-1; i++) {
-    for (let j = 0; j < n-1-i; j++) {
-       if (arr[j]>arr[j+1]) {
-        let temp=arr[j];
-        arr[j]=arr[j+1];
-        arr[j+1]=temp;
-       } 
-  }
-}
-console.log(arr)
-   
+// let a=[10,5,12,1,3];
+// let n = a.length;
+// for (let i = 0; i < n-1; i++) {
+//     for (let j = 0; j < n-1-i; j++) {
+//        if (a[j]>a[j+1]) {
+//         let temp=a[j];
+//         a[j]=a[j+1];
+//         a[j+1]=temp;
+//        } 
+//   }
+// }
+// console.log(a)
+
+// 2:- Selection Sort :-aay ke unsorted part se smallest element dhoondo aur usko front par le aao.
+// Selection Sort = select smallest + one swap per round
+// let a=[10,5,1,12,9];
+// let n=a.length;
+// for (let i = 0; i <n-1; i++) {
+//     let min=i
+//     for (let j = i+1; j <n; j++) {
+//         if (a[j]<a[min]) {
+//             min=j;
+//         }
+        
+//     }
+//     let temp=a[i];
+//     a[i]=a[min];
+//     a[min]=temp;
+// }
+// console.log(a)
+
+
+// -------------------------------------------------------------------
+// Bubble vs Selection (ONE LINE)                                     |
+//                                                                    |
+// Bubble → baar-baar swap                                            |
+//                                                                    |
+// Selection → smallest dhundho, ek swap                              |
+// -------------------------------------------------------------------
+
+// insertion sort:-
